@@ -1,0 +1,307 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+[class^="icon-"], [class*=" icon-"]
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+.icon-curr_icon:before
+  content: "\e900";
+  color: #fff;
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+ 
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+  background: #E5E5E5 
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.wrap
+  min-width: 1280px
+  width: 100%
+
+header
+  color: #fff
+  height: 327px
+  background: #121212
+  position: relative
+  padding: 43px 100px 0
+  &::after
+    content: ""
+    background: url('../img/header_after_bg.png') no-repeat
+    width: 35.52%
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+  &::before
+    content: ""
+    background: url('../img/header_before_bg.png') no-repeat
+    width: 583px
+    height: 100%
+    position: absolute
+    right: 26%
+    top: 0
+    z-index: 2
+
+  .header_data
+    position: relative
+    z-index: 3
+
+  .header_btn
+
+.header_info
+  display: flex
+  align-items: center
+  .logo
+    width: 248px
+    img
+      max-width: 100%
+
+  .area_box
+    margin-left: 49px
+    margin-right: 91px
+    font-size: 30px
+    line-height: 48px
+    font-weight: bold
+    position: relative
+    &::after
+      content: ""
+      height: 1px
+      width: 100%
+      background: #E25F23
+      box-shadow: 0px 0px 5px #E25F23
+      position: absolute
+      bottom: 0
+      left: 0
+
+  .balance_box
+    font-weight: bold
+    font-size: 34px
+    line-height: 44px
+    span
+      margin-left: 10px
+      font-size: 44px
+      color: #DC631F
+      .icon-curr_icon
+        position: relative
+        left: -5px
+        top: -2px
+        font-size: 34px
+
+.header_steps
+  margin-top: 80px
+  display: flex
+  .step
+    display: flex
+    align-items: flex-start
+    span
+      font-weight: bold
+      font-size: 96px
+      line-height: 60px
+      color: transparent
+      -webkit-text-stroke: 2px #e25f23
+      position: relative
+      &::after
+        content: "";
+        height: 60px
+        width: 100%
+        background: linear-gradient(180deg,rgba(196,196,196,0) 0,#121212 120%)
+        z-index: 1
+        position: absolute
+        bottom: -12%
+        left: 0
+    small
+      margin-left: 31px
+      font-size: 24px
+      line-height: 1.25
+      letter-spacing: 0.15em
+    & + .step
+      margin-left: 65px
+
+
+
+
+main
+  padding-top: 15px
+  display: flex
+  aside
+    background: #F7F7F7
+    width: 350px
+    padding: 18px 32px 118px 100px
+  .prds
+    width: calc(100% - 350px)
+    padding-left: 31px
+    padding-right: 100px
+
+  .prds_sort
+    display: flex
+    align-items: center
+    padding-top: 15px
+    .sort_box
+      font-size: 22px
+      line-height: 20px
+      letter-spacing: 0.2px
+      color: #000000
+      a
+        color: #5766CB
+        margin-left: 9px
+    .search_box
+      margin-left: 118px
+      input
+        border: 1px solid #5766CB
+        box-sizing: border-box
+        border-radius: 80px
+        height: 40px
+        width: 430px
+        padding-left: 42px
+        font-size: 22px
+        line-height: 20px
+        letter-spacing: 0.2px
+        color: #606060
+        background: url('../img/search-icon.svg') no-repeat 11px center
+        &::placeholder
+          font-size: 22px
+          line-height: 20px
+          letter-spacing: 0.2px
+          color: #606060
+
+.fltr
+  .fltr_title
+    margin-bottom: 40px
+    font-weight: bold
+    font-size: 32px
+    line-height: 100%
+    color: #121212
+  .fltr_items
+  .fltr_item
+    & + .fltr_item
+      margin-top: 16px
+    input
+      display: none
+      &:checked + label
+        &::before
+          border-color: #E25F23
+          background: linear-gradient(180deg, #F37C39 0%, #DC631F 100%)
+        &::after
+          content: ""
+          width: 10px
+          height: 9px
+          position: absolute
+          left: 7px
+          top: 8px
+          background: url('../img/checked-icon.svg') no-repeat
+          background-size: contain
+    label
+      cursor: pointer
+      font-weight: 500
+      font-size: 22px
+      line-height: 25px
+      letter-spacing: 0.2px
+      color: #121212
+      opacity: 0.8
+      padding-left: 49px
+      position: relative
+      &::before
+        content: ""
+        width: 25px
+        height: 25px
+        display: inline-block
+        margin-right: 24px
+        position: absolute
+        left: 0
+        top: 0
+        background: #FFFFFF
+        border: 1px solid #C4C4C4
+        box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.2)
+        border-radius: 3px
+
+
+.prds
+  .prds_sort
+    display: flex
+    margin-bottom: 36px
+  .prds_fltrs
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -7px 44px
+    position: relative
+    .prds_fltrs__item
+      background: #EFEFEF
+      border: 1px solid rgba(28, 29, 28, 0.3)
+      box-sizing: border-box
+      border-radius: 3px
+      height: 35px
+      line-height: 33px
+      padding: 0 30px
+      font-size: 18px
+      text-align: center
+      letter-spacing: 0.2px
+      color: rgba(28, 29, 28, 0.4)
+      margin: 0 7px 10px
+    .prds_fltrs__reset
+      position: absolute
+      top: -64px
+      right: 7px
+      font-size: 22px
+      line-height: 20px
+      letter-spacing: 0.2px
+      color: #000000
+      cursor: pointer
+      transition: all .3s
+      opacity: 1
+      &::before
+        content: ""
+        background: url('../img/close-icon.svg') no-repeat
+        width: 15px
+        height: 15px
+        margin-right: 7px
+        display: inline-block
+      &:hover
+        opacity: .8
+
+
+  
+    
+
+  .prds_items
+
+@import "media" // Always at the end
